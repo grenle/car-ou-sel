@@ -1,0 +1,44 @@
+/*
+L'id du carousel, la div tout autour avec les classes
+'carousel slide'
+*/
+#carouselExampleControls{
+    position: relative;
+}
+
+/*
+L'id de notre formulaire
+*/
+#searchTerm{
+    width: 100%;         /* Pour qu'il prenne toute la largeur du carousel */
+    z-index: 9;          /* Pour que le formulaire soit "au dessus" de l'image  */
+    /*
+    Avec position absolute, l'object est placé par rapport à
+    son ancêtre le plus proche qui a "position: relative".
+    Ici, c'est le carousel. Du coup on lui dit de se metter
+    à 50% du haut du carousel et a 20% de la gauche.
+    ¿Por qué 20?
+    */
+    position: absolute;
+    top: 50%;
+    left: 20%;
+}
+
+#searchTerm input{
+    /*
+    Parce que le width de l'input est 60% est qu'on veut
+    la même marge des deux côtés, donc il reste 40% / 2
+    */
+    width: 60%;
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+}
+
+/*
+Pour éviter la bordure quand l'input est sélectionné, pas
+obligatoire
+*/
+#searchTerm input:focus{
+    outline: none;
+}
